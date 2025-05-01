@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CallbackModal from './CallbackModal'; // Adjust path if necessary
 import { FaRupeeSign } from 'react-icons/fa'; // Import if needed for formatting
-
+import Image from 'next/image';
 // Define the interface for the trip data used in this component
 interface GalleryTrip {
   id: number; // Important for keys and identifying the trip
@@ -125,7 +125,7 @@ const GalleryStamps: React.FC = () => {
           >
             {/* Image */}
             <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-xl mb-4"> {/* Use aspect ratio utilities */}
-              <img
+              <Image
                 src={trip.imageUrl} // Use renamed prop
                 alt={trip.title}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" // Group hover effect

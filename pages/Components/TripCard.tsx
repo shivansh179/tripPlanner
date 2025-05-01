@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaClock, FaUsers, FaCalendarAlt, FaRupeeSign } from 'react-icons/fa';
-
+import Image from 'next/image';
 interface TripCardProps {
   imageUrl: string;
   durationDays: number;
@@ -26,7 +26,7 @@ const TripCard: React.FC<TripCardProps> = ({
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col h-full"> {/* Added h-full */}
       {/* Image */}
       <div className="relative h-48 w-full">
-        <img
+        <Image
           className="absolute inset-0 w-full h-full object-cover"
           src={imageUrl}
           alt={title}

@@ -1,6 +1,8 @@
 import React from 'react';
 // Import icons (install react-icons if you haven't: npm install react-icons)
 import { FaClock, FaUsers, FaCalendarAlt, FaRupeeSign } from 'react-icons/fa';
+import Image from 'next/image';
+
 
 // 1. Define an interface for the component's props
 interface TripCardProps {
@@ -30,7 +32,7 @@ const TripCard: React.FC<TripCardProps> = ({
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out flex flex-col">
       {/* Image */}
       <div className="relative h-48 w-full">
-        <img
+        <Image
           className="absolute inset-0 w-full h-full object-cover"
           src={imageUrl}
           alt={title} // Use title for alt text, good practice

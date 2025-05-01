@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 const Landing = () => {
   const phrases = [
     "I Came, I Saw, I Captured",
@@ -27,7 +27,7 @@ const Landing = () => {
   return (
     <div className="relative h-screen w-full flex flex-col justify-center items-center text-white overflow-hidden">
       <div className="absolute inset-0">
-        <img 
+        <Image 
           src="/landing2.jpg" 
           alt="Travel background" 
           className="w-full h-full object-cover"

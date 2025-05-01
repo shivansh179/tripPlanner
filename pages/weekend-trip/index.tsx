@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Navbar from '../Components/Navbar'; // Adjust path if necessary
 import TripCard from '../Components/Cards/TripCard'; // Adjust path if necessary
 import CallbackModal from '../Components/CallbackModal'; // Adjust path if necessary
+import Image from 'next/image';
 
 // Define the Trip type/interface (ensure this matches the props for TripCard and CallbackModal)
 interface Trip {
@@ -190,8 +191,8 @@ const IndexPage: React.FC = () => { // Use React.FC for functional component typ
 
       {/* --- Hero Section --- */}
        <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-screen">
-        <img
-          src="/roundTrip.jpg" // Ensure this image exists in public folder
+        <Image
+          src="/roundTrip.jpg" 
           alt="Scenic background"
           className="absolute inset-0 w-full h-full object-cover"
         />
