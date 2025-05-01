@@ -195,6 +195,8 @@ const IndexPage: React.FC = () => { // Use React.FC for functional component typ
           src="/roundTrip.jpg" 
           alt="Scenic background"
           className="absolute inset-0 w-full h-full object-cover"
+          width={2000}
+          height={1600}
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-opacity-40 p-4">
           <div className="text-center">

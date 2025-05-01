@@ -103,6 +103,8 @@ const Index: React.FC = () => {
           src="/landing.jpg"
           alt="Travel background"
           className="absolute inset-0 w-full h-full object-cover z-0"
+          width={2000}
+          height={1600}
         />
         <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
 

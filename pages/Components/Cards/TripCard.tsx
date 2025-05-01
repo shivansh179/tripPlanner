@@ -36,6 +36,8 @@ const TripCard: React.FC<TripCardProps> = ({
           className="absolute inset-0 w-full h-full object-cover"
           src={imageUrl}
           alt={title} // Use title for alt text, good practice
+          width={200}
+          height={160}
         />
       </div>
 

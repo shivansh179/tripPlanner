@@ -30,8 +30,9 @@ const Landing = () => {
       <div className="absolute inset-0">
         <Image 
           src="/landing2.jpg" 
-          width={100}
-          height={100}
+          width={2000}
+          height={1600}
+          quality={100}
           alt="Travel background" 
           className="w-full h-full object-cover"
         />
