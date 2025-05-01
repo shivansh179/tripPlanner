@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast'; // Import toast for feedback
 // --- EmailJS Configuration ---
 // Using the IDs you provided. Ensure the Public Key ENV var is set.
 const EMAILJS_SERVICE_ID = 'service_qawyimg';
-const EMAILJS_TEMPLATE_ID = 'template_h1mn5v5'; // Ensure this template expects the new fields
+const EMAILJS_TEMPLATE_ID = 'template_ke6tr48'; // Ensure this template expects the new fields
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || ''; // Get Public Key from ENV
 
 if (!EMAILJS_PUBLIC_KEY) {
