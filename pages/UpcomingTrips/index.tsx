@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar'; // Adjust path if needed
 import emailjs from '@emailjs/browser';   // Import EmailJS SDK
 import toast, { Toaster } from 'react-hot-toast'; // Import toast for feedback
 import Image from 'next/image';
+
 // --- EmailJS Configuration ---
 // Using the IDs you provided. Ensure the Public Key ENV var is set.
 const EMAILJS_SERVICE_ID = 'service_qawyImage';

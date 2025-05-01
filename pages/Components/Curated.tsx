@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CallbackModal from './CallbackModal'; // Adjust path if necessary
 import { FaRupeeSign } from 'react-icons/fa'; // Import if needed for formatting
 import Image from 'next/image';
+
 // Define the interface for the trip data used in this component
 interface GalleryTrip {
   id: number; // Important for keys and identifying the trip
@@ -128,6 +129,8 @@ const GalleryStamps: React.FC = () => {
               <Image
                 src={trip.imageUrl} // Use renamed prop
                 alt={trip.title}
+                width={100}
+                height={100}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" // Group hover effect
               />
             </div>

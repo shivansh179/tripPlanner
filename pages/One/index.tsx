@@ -138,7 +138,7 @@ const BlogPage: React.FC = () => {
                       objectFit="cover"
                       priority // Load hero image faster
                     />
-                    {/* <img src={heroBlogData.imageUrl} alt={heroBlogData.title} className="w-full h-full object-cover" /> */}
+                    {/* <Image src={heroBlogData.imageUrl} alt={heroBlogData.title} className="w-full h-full object-cover" /> */}
                 </div>
              </div>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaClock, FaUsers, FaCalendarAlt, FaRupeeSign } from 'react-icons/fa';
 import Image from 'next/image';
+
 interface TripCardProps {
   imageUrl: string;
   durationDays: number;

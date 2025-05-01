@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import Image from 'next/image';
+
 
 const Navbar = () => {
   const handleFeatureInDevelopment = () => {
@@ -24,7 +26,13 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             {/* Logo */}
             <Link href="/">
-              <span className="text-2xl font-bold text-green-800 cursor-pointer">Logo</span>
+                    <Image 
+                        src="/logo.png"
+                        alt="Travel background" 
+                        width={100}
+                        height={100}
+                        className="w-full h-full object-cover"
+                      />
             </Link>
 
             {/* Phone */}

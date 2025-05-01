@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'; // Import toast for feedback
 
 // --- EmailJS Configuration ---
 // !! IMPORTANT: Replace with your actual IDs and ensure ENV var is set !!
-const EMAILJS_SERVICE_ID = 'service_qawyimg'; // Replace
+const EMAILJS_SERVICE_ID = 'service_qawyImage'; // Replace
 const EMAILJS_TEMPLATE_ID = 'template_h1mn5v5'; // Replace
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_USER_ID || ''; // Get from ENV
 
@@ -155,8 +155,8 @@ const CallbackModal: React.FC<CallbackModalProps> = ({ isOpen, onClose, tripData
           <div className="relative w-16 h-12 rounded-md overflow-hidden mr-4 flex-shrink-0">
             {/* Use next/image if available and configured */}
             <Image src={tripData.imageUrl} alt={tripData.title} layout="fill" objectFit="cover" />
-            {/* Fallback img tag */}
-            {/* <img src={tripData.imageUrl} alt={tripData.title} className="w-full h-full object-cover" /> */}
+            {/* Fallback Image tag */}
+            {/* <Image src={tripData.imageUrl} alt={tripData.title} className="w-full h-full object-cover" /> */}
           </div>
           <div>
             <h2 className="text-lg font-semibold text-gray-800 leading-tight">{tripData.title}</h2>
