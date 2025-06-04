@@ -260,7 +260,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* ---- Bottom Bar: Copyright & Payment ---- */}
-          <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs">
+          <div className="border-t border-gray-200 mt-10 pt-5 flex flex-col md:flex-row justify-between items-center text-xs">
             <p className="text-gray-500 mb-4 md:mb-0">
               © 2016 - {new Date().getFullYear()} YLOO Trips (Ambe Enterprises). All rights reserved.
             </p>
