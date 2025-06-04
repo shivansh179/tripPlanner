@@ -2,63 +2,93 @@ import React from 'react';
 import {
   FaWhatsapp,
   FaTwitter,
-  FaFacebookF, // Note: Use FaFacebookF for the 'f' logo
+  FaFacebookF,
   FaInstagram,
-  FaLinkedinIn, // Note: Use FaLinkedinIn for the 'in' logo
+  FaLinkedinIn,
   FaMapMarkerAlt,
   FaCcVisa,
   FaCcMastercard,
   FaCcAmex,
   FaCcPaypal,
-  // Using placeholders for custom icons - replace with actual SVGs/Images if available
-  FaRegThumbsUp, // Placeholder for Vibe check
-  FaShieldAlt, // Placeholder for Solo Safe
-  FaUsers,     // Placeholder for Group Captains
-  FaLeaf,      // Placeholder for Greenest Flag
-  FaBan,       // Placeholder for No Kebab (maybe?)
+  FaRegThumbsUp,
+  FaShieldAlt,
+  FaUsers,
+  FaLeaf,
+  FaBan,
 } from 'react-icons/fa';
-import { SiGoogletagmanager } from "react-icons/si"; // Example for a custom icon like the footer logo
+import { SiGoogletagmanager } from "react-icons/si";
 
-// Define interfaces for data structures if needed (optional for static content)
 interface AddressInfo {
-  location: string;
-  mapLink?: string;
+  title: string;
   addressLines: string[];
-  mobile: string;
+  mobile?: string;
+  email?: string;
+  mapLink?: string;
 }
 
 const Footer: React.FC = () => {
 
+  // UPDATED: Replaced with “Ambe Enterprises” / “YLOO Trips” address details from the image
   const addresses: AddressInfo[] = [
     {
-      location: 'Capture a Trip India Pvt Ltd - Delhi',
+      title: 'Office Address (Ambe Enterprises – Gurugram)',
       addressLines: [
-        '1473-G NN-196/9, Bramh Gali, West Rohtash Nagar,',
-        'Shahdara, New Delhi - 110032',
+        '301, Plot 130-131, Avenue 69, Sector 69,',
+        'Gurugram, Haryana 122101'
       ],
-      mobile: '+91-8287636079 / 8076780552',
+      mobile: '788833061',
+      email: 'Hello@ylootrips.com',
+      // If you have a Google Maps link for this office, paste it here. Otherwise you can leave it blank or remove.
+      mapLink: 'https://goo.gl/maps/YourGurugramOfficeLink'
     },
     {
-      location: 'CaptureaTrip India Pvt Ltd – Faridabad',
-      mapLink: '#', // Add actual map link
+      title: 'GST Registered Address (Ambe Enterprises – Delhi)',
       addressLines: [
-        'Office No 304, 3rd floor, SRS Tower, Sector-31,',
-        'Near Mewla Maharajpur Metro Station,',
-        'Faridabad, Haryana 121003, India',
+        'FIRST FLOOR, D-86/1, LAXMI NAGAR, GALI NO.4,',
+        'LAXMI NAGAR, East Delhi, Delhi 110092'
       ],
-      mobile: '+91-8368653222',
-    },
-    {
-      location: 'CaptureaTrip India Pvt Ltd – Gurgaon',
-      mapLink: '#', // Add actual map link
-      addressLines: [
-        'Plot no-378,Udyog vihar phase 2,opposite',
-        'vi john we-work,Gurgaon, Haryana 122016, India',
-      ],
-      mobile: '+91-8368653222',
+      // For the registered address, we typically don’t call customers here, so no mobile is mandatory. You can remove mobile if you wish.
+      // But I’ll leave the same “788833061” if you’d like customers to use it for all locations:
+      mobile: '788833061',
+      mapLink: 'https://goo.gl/maps/YourLaxmiNagarLink'
     }
   ];
 
+  // The “reasons” block remains unchanged
+  const reasons = [
+    {
+      icon: <FaBan size={40} className="text-red-500" />,
+      title: "No kebab main haddi!",
+      description:
+        "No middlemen, no hidden fees. Enjoy direct bookings, lower costs, and personalized support for a seamless and affordable trips."
+    },
+    {
+      icon: <FaLeaf size={40} className="text-green-600" />,
+      title: "We're the greenest flag",
+      description:
+        "We ensure safety with verified stays, reliable transport, and trained guides for a secure, comfy, and hassle-free trip."
+    },
+    {
+      icon: <FaUsers size={40} className="text-orange-500" />,
+      title: "Our Group Captains are fire",
+      description:
+        "Our awesome trip captains are part-guide, part-friend and full time vibe curators"
+    },
+    {
+      icon: <FaShieldAlt size={40} className="text-blue-500" />,
+      title: "Solo is safe",
+      description:
+        "Girlies, you're safe AF. No need to wait on fam or besties—just pack and go! Explore stress-free with 100% freedom!"
+    },
+    {
+      icon: <FaRegThumbsUp size={40} className="text-pink-500" />,
+      title: "Vibe check comes first",
+      description:
+        "We customize your trips based on age groups, so you're not stuck vibing to someone else's playlist without permission"
+    }
+  ];
+
+  // Travel blog links and quick links can remain unchanged or be updated to your new YLOO Trips blog if you have one
   const travelBlogLinks = [
     "# Places to Visit in Leh Ladakh",
     "# Places in Himachal Pradesh",
@@ -79,81 +109,89 @@ const Footer: React.FC = () => {
     { name: 'Blogs', href: '#' },
     { name: 'Disclaimer', href: '#' },
     { name: 'Privacy Policy', href: '#' },
-    { name: 'Cancellation policy', href: '#' },
+    { name: 'Cancellation Policy', href: '#' },
     { name: 'Terms & Conditions', href: '#' },
     { name: 'About Us', href: '#' },
     { name: 'Linktree', href: '#' },
   ];
 
-
-  // Replace placeholders with actual icons/images when available
-  const reasons = [
-    { icon: <FaBan size={40} className="text-red-500" />, title: "No kebab main haddi!", description: "No middlemen, no hidden fees. Enjoy direct bookings, lower costs, and personalized support for a seamless and affordable trips." },
-    { icon: <FaLeaf size={40} className="text-green-600" />, title: "We're the greenest flag", description: "We ensure safety with verified stays, reliable transport, and trained guides for a secure, comfy, and hassle-free trip." },
-    { icon: <FaUsers size={40} className="text-orange-500" />, title: "Our Group Captains are fire", description: "Our awesome trip captains are part-guide, part-friend and full time vibe curators" },
-    { icon: <FaShieldAlt size={40} className="text-blue-500" />, title: "Solo is safe", description: "Girlies, you're safe AF. No need to wait on fam or besties—just pack and go! Explore stress-free with 100% freedom!" },
-    { icon: <FaRegThumbsUp size={40} className="text-pink-500" />, title: "Vibe check comes first", description: "We customize your trips based on age groups, so you're not stuck vibing to someone else's playlist without permission" },
-  ];
-
-
   return (
-    <footer className="bg-gray-50 text-gray-700 text-sm"> {/* Overall footer container */}
-
-      {/* Section 1: Reasons To Make us your travel bestie */}
+    <footer className="bg-gray-50 text-gray-700 text-sm">
+      {/* ==================================================================================
+          SECTION 1: Reasons To Make Us Your Travel Bestie
+          ================================================================================== */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-10 md:mb-12">
-            Reasons To Make us your travel bestie.
+            Reasons To Make Us Your Travel Bestie
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12 max-w-5xl mx-auto mb-8">
-            {reasons.slice(0, 3).map((reason, index) => (
-              <div key={index} className="text-center flex flex-col items-center">
+            {reasons.slice(0, 3).map((reason, idx) => (
+              <div key={idx} className="text-center flex flex-col items-center">
                 <div className="mb-3">{reason.icon}</div>
                 <h3 className="font-bold text-gray-800 mb-2">{reason.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{reason.description}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
             ))}
           </div>
-           {/* Second row of reasons, centered */}
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 max-w-lg mx-auto">
-            {reasons.slice(3).map((reason, index) => (
-              <div key={index + 3} className="text-center flex flex-col items-center">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-12 max-w-lg mx-auto">
+            {reasons.slice(3).map((reason, idx) => (
+              <div key={idx + 3} className="text-center flex flex-col items-center">
                 <div className="mb-3">{reason.icon}</div>
                 <h3 className="font-bold text-gray-800 mb-2">{reason.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{reason.description}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
             ))}
           </div>
-           {/* Optional: Little green logo icon */}
-           <div className="flex justify-center mt-12">
-             <div className="bg-green-600 text-white p-3 rounded-full">
-               <SiGoogletagmanager size={24} /> {/* Replace with your actual logo icon */}
-             </div>
-           </div>
+
+          <div className="flex justify-center mt-12">
+            <div className="bg-green-600 text-white p-3 rounded-full">
+              <SiGoogletagmanager size={24} />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Section 2: Footer Links & Info */}
+      {/* ==================================================================================
+          SECTION 2: Footer Links & Info
+          ================================================================================== */}
       <section className="bg-white py-10 md:py-12">
         <div className="container mx-auto px-4">
-
-          {/* Social Icons */}
+          {/* ---- Social Icons ---- */}
           <div className="flex justify-center space-x-5 mb-8">
-            <a href="#" aria-label="Twitter" className="text-green-600 hover:text-green-700"><FaTwitter size={20} /></a>
-            <a href="#" aria-label="Facebook" className="text-green-600 hover:text-green-700"><FaFacebookF size={20} /></a>
-            <a href="#" aria-label="Instagram" className="text-green-600 hover:text-green-700"><FaInstagram size={20} /></a>
-            <a href="#" aria-label="LinkedIn" className="text-green-600 hover:text-green-700"><FaLinkedinIn size={20} /></a>
-            <a href="#" aria-label="WhatsApp" className="text-green-600 hover:text-green-700"><FaWhatsapp size={20} /></a>
+            <a href="#" aria-label="Twitter" className="text-green-600 hover:text-green-700">
+              <FaTwitter size={20} />
+            </a>
+            <a href="#" aria-label="Facebook" className="text-green-600 hover:text-green-700">
+              <FaFacebookF size={20} />
+            </a>
+            <a href="#" aria-label="Instagram" className="text-green-600 hover:text-green-700">
+              <FaInstagram size={20} />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="text-green-600 hover:text-green-700">
+              <FaLinkedinIn size={20} />
+            </a>
+            <a href="#" aria-label="WhatsApp" className="text-green-600 hover:text-green-700">
+              <FaWhatsapp size={20} />
+            </a>
           </div>
 
-          {/* Footer Content Grid */}
+          {/* ---- Footer Grid ---- */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* About Us */}
             <div>
               <h4 className="font-bold text-gray-800 mb-3">About Us</h4>
               <p className="text-xs leading-relaxed mb-2">
-                Step into a world of adventure with Capture A Trip, where every journey is an opportunity to connect, explore, and discover. For over 6 years, we've been curating unforgettable travel experiences that bring people together and fulfill their wanderlust...
-                <a href="#" className="text-green-600 hover:underline ml-1">View More</a>
+                Step into a world of adventure with YLOO Trips by Ambe Enterprises.
+                For over 6 years, we’ve been curating unforgettable journeys that bring people together and fulfill their wanderlust. Whether you’re traveling solo or with friends, our verified stays and expert guides ensure you’re always in safe hands.
+                <a href="#" className="text-green-600 hover:underline ml-1">
+                  View More
+                </a>
               </p>
             </div>
 
@@ -161,68 +199,87 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="font-bold text-gray-800 mb-3">Travel Blogs</h4>
               <ul className="space-y-1.5 text-xs">
-                {travelBlogLinks.map((link, index) => (
-                   <li key={index}>
-                     <a href="#" className="hover:text-green-600 hover:underline">{link}</a>
-                   </li>
-                 ))}
+                {travelBlogLinks.map((link, idx) => (
+                  <li key={idx}>
+                    <a href="#" className="hover:text-green-600 hover:underline">
+                      {link}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Quick Links */}
             <div>
               <h4 className="font-bold text-gray-800 mb-3">Quick Links</h4>
-               <ul className="space-y-1.5 text-xs">
-                 {quickLinks.map((link) => (
-                   <li key={link.name}>
-                     <a href={link.href} className="hover:text-green-600 hover:underline">{link.name}</a>
-                   </li>
-                 ))}
+              <ul className="space-y-1.5 text-xs">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <a href={link.href} className="hover:text-green-600 hover:underline">
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Address */}
+            {/* Address(es) */}
             <div>
               <h4 className="font-bold text-gray-800 mb-3">Address</h4>
-              <div className="space-y-4 text-xs">
-                 {addresses.map((addr, index) => (
-                   <div key={index}>
-                     <p className="font-semibold text-gray-800 mb-1">{addr.location}</p>
-                     {addr.mapLink && (
-                       <a href={addr.mapLink} className="flex items-center text-green-600 hover:underline mb-1">
-                         <FaMapMarkerAlt className="mr-1" /> View on Map
-                       </a>
-                     )}
-                     {addr.addressLines.map((line, lineIndex) => (
-                       <p key={lineIndex} className="leading-snug">{line}</p>
-                     ))}
-                     <p className="mt-1">Mobile: {addr.mobile}</p>
-                   </div>
-                 ))}
+              <div className="space-y-6 text-xs">
+                {addresses.map((addr, idx) => (
+                  <div key={idx}>
+                    <p className="font-semibold text-gray-800 mb-1">{addr.title}</p>
+                    {addr.mapLink && (
+                      <a
+                        href={addr.mapLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-green-600 hover:underline mb-1"
+                      >
+                        <FaMapMarkerAlt className="mr-1" /> View on Map
+                      </a>
+                    )}
+                    {addr.addressLines.map((line, lineIdx) => (
+                      <p key={lineIdx} className="leading-snug">
+                        {line}
+                      </p>
+                    ))}
+                    {addr.mobile && (
+                      <p className="mt-1">Mobile: <a href={`tel:${addr.mobile}`} className="text-green-600 hover:underline">{addr.mobile}</a></p>
+                    )}
+                    {addr.email && (
+                      <p>
+                        Email: <a href={`mailto:${addr.email}`} className="text-green-600 hover:underline">{addr.email}</a>
+                      </p>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Bottom Bar: Copyright & Payment */}
+          {/* ---- Bottom Bar: Copyright & Payment ---- */}
           <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs">
             <p className="text-gray-500 mb-4 md:mb-0">
-              © 2016 - {new Date().getFullYear()} Capture A Trip India Pvt. Ltd. All rights reserved
+              © 2016 - {new Date().getFullYear()} YLOO Trips (Ambe Enterprises). All rights reserved.
             </p>
             <div className="flex items-center space-x-3">
-              {/* Replace with actual payment icons/images if needed */}
               <FaCcVisa size={28} className="text-gray-400" />
               <FaCcMastercard size={28} className="text-gray-400" />
               <FaCcAmex size={28} className="text-gray-400" />
               <FaCcPaypal size={28} className="text-gray-400" />
-              {/* Add other icons like RuPay, UPI etc. as needed */}
+              {/* Add other payment icons (e.g., RuPay, UPI) if needed */}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Fixed WhatsApp Button */}
+      {/* ==================================================================================
+          FIXED WHATSAPP BUTTON
+          ================================================================================== */}
       <a
-        href="https://wa.me/YOUR_WHATSAPP_NUMBER" // Replace with your actual WhatsApp link/number
+        href="https://wa.me/788833061" // Direct link to Ambe Enterprises WhatsApp
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
@@ -230,7 +287,6 @@ const Footer: React.FC = () => {
       >
         <FaWhatsapp size={24} />
       </a>
-
     </footer>
   );
 };
