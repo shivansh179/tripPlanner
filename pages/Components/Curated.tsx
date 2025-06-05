@@ -34,51 +34,51 @@ const trips: GalleryTrip[] = [
     tag: 'Early Bird',
     price: 20999 // Changed to number
   },
-  {
+  // {
+  //   id: 102,
+  //   slug: 'europe-stamp',
+  //   imageUrl: '/landing.jpg',
+  //   title: 'Europe',
+  //   price: 139999
+  // },
+  // {
+  //   id: 103,
+  //   slug: 'bhutan-stamp',
+  //   imageUrl: '/landing.jpg',
+  //   title: 'Bhutan',
+  //   price: 33999
+  // },
+  // {
+  //   id: 104,
+  //   slug: 'baku-almaty-stamp',
+  //   imageUrl: '/landing.jpg',
+  //   title: 'Baku & Almaty',
+  //   price: 49999
+  // }
+   {
     id: 102,
-    slug: 'europe-stamp',
-    imageUrl: '/landing.jpg',
-    title: 'Europe',
-    price: 139999
-  },
-  {
-    id: 103,
-    slug: 'bhutan-stamp',
-    imageUrl: '/landing.jpg',
-    title: 'Bhutan',
-    price: 33999
-  },
-  {
-    id: 104,
-    slug: 'baku-almaty-stamp',
-    imageUrl: '/landing.jpg',
-    title: 'Baku & Almaty',
-    price: 49999
-  }
-  , {
-    id: 105,
     slug: 'ladakh-stamp-2', // Ensure slugs/ids are unique if repeating
     imageUrl: '/landing.jpg',
     title: 'Ladakh',
     tag: 'Early Bird',
     price: 20999
   },
+  // {
+  //   id: 106,
+  //   slug: 'europe-stamp-2',
+  //   imageUrl: '/landing.jpg',
+  //   title: 'Europe',
+  //   price: 139999
+  // },
+  // {
+  //   id: 107,
+  //   slug: 'bhutan-stamp-2',
+  //   imageUrl: '/landing.jpg',
+  //   title: 'Bhutan',
+  //   price: 33999
+  // },
   {
-    id: 106,
-    slug: 'europe-stamp-2',
-    imageUrl: '/landing.jpg',
-    title: 'Europe',
-    price: 139999
-  },
-  {
-    id: 107,
-    slug: 'bhutan-stamp-2',
-    imageUrl: '/landing.jpg',
-    title: 'Bhutan',
-    price: 33999
-  },
-  {
-    id: 108,
+    id: 103,
     slug: 'baku-almaty-stamp-2',
     imageUrl: '/landing.jpg',
     title: 'Baku & Almaty',

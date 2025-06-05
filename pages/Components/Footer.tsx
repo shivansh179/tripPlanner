@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         '301, Plot 130-131, Avenue 69, Sector 69,',
         'Gurugram, Haryana 122101'
       ],
-      mobile: '788833061',
+      mobile: '7888733061',
       email: 'Hello@ylootrips.com',
       // If you have a Google Maps link for this office, paste it here. Otherwise you can leave it blank or remove.
       mapLink: 'https://goo.gl/maps/YourGurugramOfficeLink'
@@ -48,8 +48,8 @@ const Footer: React.FC = () => {
         'LAXMI NAGAR, East Delhi, Delhi 110092'
       ],
       // For the registered address, we typically don’t call customers here, so no mobile is mandatory. You can remove mobile if you wish.
-      // But I’ll leave the same “788833061” if you’d like customers to use it for all locations:
-      mobile: '788833061',
+      // But I’ll leave the same “7888733061” if you’d like customers to use it for all locations:
+      mobile: '7888733061',
       mapLink: 'https://goo.gl/maps/YourLaxmiNagarLink'
     }
   ];
@@ -279,7 +279,7 @@ const Footer: React.FC = () => {
           FIXED WHATSAPP BUTTON
           ================================================================================== */}
       <a
-        href="https://wa.me/788833061" // Direct link to Ambe Enterprises WhatsApp
+        href="https://wa.me/7888733061" // Direct link to Ambe Enterprises WhatsApp
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

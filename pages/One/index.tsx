@@ -57,12 +57,12 @@ const recentBlogsData: BlogData[] = [
     authorName: 'Shazan Ali',
     authorImageUrl: '/authors/shazan.jpg', // Replace
   },
-   {
-    slug: '23-places-visit-baku',
-    imageUrl: '/blog/featured2.jpg', // Replace
-    title: '23 Best Places to Visit in Baku: The Ultimate Guide',
-    date: '2024-04-05',
-  },
+  //  {
+  //   slug: '23-places-visit-baku',
+  //   imageUrl: '/blog/featured2.jpg', // Replace
+  //   title: '23 Best Places to Visit in Baku: The Ultimate Guide',
+  //   date: '2024-04-05',
+  // },
    {
     slug: 'darjeeling-may-weather',
     imageUrl: '/blog/featured3.jpg', // Replace
