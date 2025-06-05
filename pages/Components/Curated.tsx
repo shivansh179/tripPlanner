@@ -58,8 +58,8 @@ const trips: GalleryTrip[] = [
    {
     id: 102,
     slug: 'ladakh-stamp-2', // Ensure slugs/ids are unique if repeating
-    imageUrl: '/landing.jpg',
-    title: 'Ladakh',
+    imageUrl: '/placeholder.jpg',
+    title: 'Coming soon ...',
     tag: 'Early Bird',
     price: 20999
   },
@@ -77,13 +77,13 @@ const trips: GalleryTrip[] = [
   //   title: 'Bhutan',
   //   price: 33999
   // },
-  {
-    id: 103,
-    slug: 'baku-almaty-stamp-2',
-    imageUrl: '/landing.jpg',
-    title: 'Baku & Almaty',
-    price: 49999
-  }
+  // {
+  //   id: 103,
+  //   slug: 'baku-almaty-stamp-2',
+  //   imageUrl: '/landing.jpg',
+  //   title: 'Baku & Almaty',
+  //   price: 49999
+  // }
 ];
 
 const GalleryStamps: React.FC = () => {
