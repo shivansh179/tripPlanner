@@ -100,11 +100,12 @@ const Index: React.FC = () => {
 
         {/* Background image */}
         <Image
-          src="/landing.jpg"
+          src="https://images.unsplash.com/photo-1639345868466-4afd943c7195?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFRSSVAlMjBFVkVOSU5JR3xlbnwwfHwwfHx8MA%3D%3D"
           alt="Travel background"
           className="absolute inset-0 w-full h-full object-cover z-0"
           width={2000}
           height={1600}
+          // unoptimized
         />
         <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
 

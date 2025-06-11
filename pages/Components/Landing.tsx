@@ -28,14 +28,19 @@ const Landing = () => {
   return (
     <div className="relative h-screen w-full flex flex-col justify-center items-center text-white overflow-hidden">
       <div className="absolute inset-0">
-        <Image 
-          src="/landing2.jpg" 
-          width={2000}
-          height={1600}
-          quality={100}
-          alt="Travel background" 
-          className="w-full h-full object-cover"
-        />
+      <Image 
+  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=2000&auto=format&fit=crop&q=80"
+  width={2000}
+  height={1600}
+  quality={100}
+  alt="Travel background" 
+  className="w-full h-full object-cover"
+  unoptimized
+/>
+
+
+
+{/* <img src="https://storage.googleapis.com/yloo_images/roundTrip.jpg"   className="w-full h-full object-cover"  alt="" /> */}
       </div>
       
       <div className="relative z-10 text-center px-4">

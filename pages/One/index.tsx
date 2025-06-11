@@ -18,7 +18,7 @@ interface BlogData {
 
 const heroBlogData: BlogData = {
     slug: '10-romantic-sunset-dinners',
-    imageUrl: '/blog/dinner.jpg', // Replace with your image path
+    imageUrl: 'https://images.unsplash.com/photo-1639244132045-94c307ff4bfc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmVhY2glMjBkaW5uZXJ8ZW58MHx8MHx8fDA%3D', // Replace with your image path
     title: '10 Romantic Sunset Dinners Around the World',
     date: '2024-05-01',
 };
@@ -26,7 +26,7 @@ const heroBlogData: BlogData = {
 const featuredBlogsData: BlogData[] = [
   {
     slug: '4-days-trip-from-delhi',
-    imageUrl: '/blog/travel1.jpg', // Replace
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1697730334768-6e65fa8fded0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGRlbGhpJTIwdHJpcHxlbnwwfHwwfHx8MA%3D%3D', // Replace
     title: 'Looking For 4 Days Trip From Delhi?',
     date: '2024-04-05',
     authorName: 'Jyoti Singh',
@@ -34,14 +34,14 @@ const featuredBlogsData: BlogData[] = [
   },
   {
     slug: 'explore-dubai-5-star-hotels',
-    imageUrl: '/blog/travel2.jpg', // Replace
+    imageUrl: 'https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZHViYWl8ZW58MHx8MHx8fDA%3D', // Replace
     title: 'Explore 5 Star Hotels In Dubai: Luxurious E...', // Truncated example
     date: '2024-04-27',
     // No author info shown in example
   },
   {
     slug: '7-reasons-visit-spiti-valley',
-    imageUrl: '/blog/spiti.jpg', // Replace
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1661878309257-f4343940ce4d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3BpdGl8ZW58MHx8MHx8fDA%3D', // Replace
     title: '7 Reasons to Visit Spiti Valley',
     date: '2024-04-06',
      // No author info shown in example
@@ -51,7 +51,7 @@ const featuredBlogsData: BlogData[] = [
 const recentBlogsData: BlogData[] = [
    {
     slug: '15-amazing-places-almaty',
-    imageUrl: '/blog/featured1.jpg', // Replace
+    imageUrl: 'https://images.unsplash.com/photo-1659651117607-d2b397cf100f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWxtYXR5fGVufDB8fDB8fHww', // Replace
     title: 'Explore 15 Amazing Places to Visit in Almaty',
     date: '2024-04-19',
     authorName: 'Shazan Ali',
@@ -65,37 +65,37 @@ const recentBlogsData: BlogData[] = [
   // },
    {
     slug: 'darjeeling-may-weather',
-    imageUrl: '/blog/featured3.jpg', // Replace
+    imageUrl: 'https://images.pexels.com/photos/634753/pexels-photo-634753.jpeg?auto=compress&cs=tinysrgb&w=1200', // Replace
     title: 'Darjeeling in May: Ideal Weather, Stunning Views, & More!',
     date: '2025-04-30', // Future date example
   },
    {
     slug: 'best-beaches-azerbaijan-2025',
-    imageUrl: '/blog/featured4.jpg', // Replace
+    imageUrl: 'https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?auto=compress&cs=tinysrgb&w=1200', // Replace
     title: 'Best Beaches in Azerbaijan to Visit in 2025',
     date: '2025-04-30', // Future date example
   },
    {
     slug: 'almaty-may-complete-guide',
-    imageUrl: '/blog/featured5.jpg', // Replace
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1731501020051-8ea84c8a16bc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFsbWF0eSUyMHRyaXB8ZW58MHx8MHx8fDA%3D', // Replace
     title: 'Almaty in May: Your Complete Travel Guide to Weather,...',
     date: '2025-04-30', // Future date example
   },
    {
     slug: 'top-15-haunted-places',
-    imageUrl: '/blog/featured6.jpg', // Replace
+    imageUrl: 'https://images.pexels.com/photos/13107081/pexels-photo-13107081.jpeg?auto=compress&cs=tinysrgb&w=1200', // Replace
     title: 'Top 15 Haunted Places in the World',
     date: '2025-04-30', // Future date example
   },
    {
     slug: 'top-20-places-himachal',
-    imageUrl: '/blog/featured7.jpg', // Replace
+    imageUrl: 'https://images.unsplash.com/photo-1692719058797-2954b100c8fe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGltYWNoYWx8ZW58MHx8MHx8fDA%3D', // Replace
     title: 'Top 20 Places to visit in Himachal Pradesh',
     date: '2024-04-05',
   },
    {
     slug: 'rich-tastes-andaman-nicobar',
-    imageUrl: '/blog/featured8.jpg', // Replace
+    imageUrl: 'https://images.unsplash.com/photo-1586053226626-febc8817962f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5kYW1hbnxlbnwwfHwwfHx8MA%3D%3D', // Replace
     title: 'Rich Tastes Of Andaman And Nicobar Food: A Culinary Adventure',
     date: '2024-11-22',
   },

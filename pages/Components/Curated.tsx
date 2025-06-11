@@ -13,8 +13,7 @@ interface GalleryTrip {
   price: number; // Use number for price for easier handling/formatting
 }
 
-// Define the interface expected by the CallbackModal
-// Ensure this matches the interface used when creating CallbackModal
+
 interface ModalTripData {
     id: number;
     slug: string;
@@ -24,12 +23,11 @@ interface ModalTripData {
 }
 
 
-// Sample Data (Modified for consistency and modal compatibility)
 const trips: GalleryTrip[] = [
   {
     id: 101, // Added unique ID
     slug: 'ladakh-stamp-1', // Added unique slug
-    imageUrl: '/landing.jpg', // Renamed from 'image'
+    imageUrl: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFkYWtofGVufDB8fDB8fHww', // Renamed from 'image'
     title: 'Ladakh',
     tag: 'Early Bird',
     price: 20999 // Changed to number
@@ -58,7 +56,7 @@ const trips: GalleryTrip[] = [
    {
     id: 102,
     slug: 'ladakh-stamp-2', // Ensure slugs/ids are unique if repeating
-    imageUrl: '/placeholder.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1635255506105-b74adbd94026?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFkYWtofGVufDB8fDB8fHww',
     title: 'Coming soon ...',
     tag: 'Early Bird',
     price: 20999

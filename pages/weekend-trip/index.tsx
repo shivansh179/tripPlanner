@@ -35,7 +35,7 @@ const sampleTrips: Trip[] = [
   {
     id: 1,
     slug: 'kedarnath-luxury-3n-4d',
-    imageUrl: '/weekendTrip/kedarnath.jpg', // Ensure these images exist in public/weekendTrip
+    imageUrl: 'https://images.unsplash.com/photo-1612438214708-f428a707dd4e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8a2VkYXJuYXRofGVufDB8fDB8fHww', // Ensure these images exist in public/weekendTrip
     durationDays: 4,
     durationNights: 3,
     isGroup: true,
@@ -46,7 +46,7 @@ const sampleTrips: Trip[] = [
   {
     id: 2,
     slug: 'bir-billing-packages-from-delhi',
-    imageUrl: '/weekendTrip/parachute.jpg', // Ensure these images exist in public/weekendTrip
+    imageUrl: 'https://images.unsplash.com/photo-1592208128295-5aaa34f1d72b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFyYWdsaWRpbmd8ZW58MHx8MHx8fDA%3D', // Ensure these images exist in public/weekendTrip
     durationDays: 2,
     durationNights: 1,
     isGroup: true,
@@ -57,7 +57,7 @@ const sampleTrips: Trip[] = [
   {
     id: 3,
     slug: 'manali-sissu-2n-3d',
-    imageUrl: '/weekendTrip/manali.jpg', // Ensure these images exist in public/weekendTrip
+    imageUrl: 'https://images.unsplash.com/photo-1622923488261-258854577e8c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2lzc3V8ZW58MHx8MHx8fDA%3D', // Ensure these images exist in public/weekendTrip
     durationDays: 3,
     durationNights: 2,
     isGroup: true,
@@ -68,7 +68,7 @@ const sampleTrips: Trip[] = [
   {
     id: 4,
     slug: 'tirthan-valley-weekend-getaway',
-    imageUrl: '/weekendTrip/valley.jpg', // Ensure these images exist in public/weekendTrip
+    imageUrl: 'https://images.unsplash.com/photo-1529251709126-13669520d1fa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGlydGhhbiUyMHZhbGxleXxlbnwwfHwwfHx8MA%3D%3D', // Ensure these images exist in public/weekendTrip
     durationDays: 3,
     durationNights: 2,
     isGroup: false,
@@ -79,7 +79,7 @@ const sampleTrips: Trip[] = [
    {
     id: 5,
     slug: 'spiti-valley-circuit-adventure',
-    imageUrl: '/weekendTrip/spiti.jpg', // Ensure these images exist in public/weekendTrip
+    imageUrl: 'https://images.unsplash.com/photo-1628782379401-4fff9cdcbbfe?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpdGl8ZW58MHx8MHx8fDA%3D', // Ensure these images exist in public/weekendTrip
     durationDays: 7,
     durationNights: 6,
     isGroup: true,
@@ -90,7 +90,7 @@ const sampleTrips: Trip[] = [
   {
     id: 6,
     slug: 'rishikesh-river-rafting-camping',
-    imageUrl: '/weekendTrip/camping.jpg', // Ensure these images exist in public/weekendTrip
+    imageUrl: 'https://images.unsplash.com/photo-1629248457649-b082812aea6c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cml2ZXIlMjByYWZ0aW5nfGVufDB8fDB8fHww', // Ensure these images exist in public/weekendTrip
     durationDays: 2,
     durationNights: 1,
     isGroup: true,
@@ -192,11 +192,12 @@ const IndexPage: React.FC = () => { // Use React.FC for functional component typ
       {/* --- Hero Section --- */}
        <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-screen">
         <Image
-          src="/roundTrip.jpg" 
+          src="https://images.unsplash.com/photo-1581932075120-59c5672f449b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRyaXAlMjBzdW4lMjBzZXR8ZW58MHx8MHx8fDA%3D" 
           alt="Scenic background"
           className="absolute inset-0 w-full h-full object-cover"
           width={2000}
           height={1600}
+          unoptimized
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-opacity-40 p-4">
           <div className="text-center">
