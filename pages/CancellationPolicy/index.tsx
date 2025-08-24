@@ -3,7 +3,7 @@ import { Calendar, Shield, RefreshCw, AlertTriangle, CheckCircle, XCircle } from
 
 export default function CancellationPolicy() {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -46,67 +46,52 @@ export default function CancellationPolicy() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      {/* Animated background elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-40 h-40 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 left-1/2 w-36 h-36 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse" style={{animationDelay: '4s'}}></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
         {/* Header Section */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6 shadow-lg">
-            <Shield className="w-8 h-8 text-white" />
-          </div>
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cancellation Policy
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Transparent and fair cancellation terms designed with your travel plans in mind
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Clear and fair terms for trip cancellations
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-6 rounded-full"></div>
         </div>
 
         {/* Traveler Cancellation Section */}
-        <div className={`mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mb-16 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Cancellation by Traveler</h2>
-            <p className="text-lg text-gray-600">Review our tiered cancellation structure based on timing</p>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">Cancellation by Traveler</h2>
+            <p className="text-gray-600">Cancellation fees depend on timing</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {travelerPolicies.map((policy, index) => (
               <div
                 key={policy.id}
-                className={`group relative overflow-hidden rounded-2xl border-2 ${policy.borderColor} ${policy.bgColor} 
-                          transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer
-                          ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                style={{transitionDelay: `${600 + index * 200}ms`}}
+                className={`bg-white rounded-lg border shadow-sm hover:shadow-md 
+                          transition-all duration-300 cursor-pointer
+                          ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{transitionDelay: `${400 + index * 100}ms`}}
                 onMouseEnter={() => setActiveCard(policy.id)}
                 onMouseLeave={() => setActiveCard(null)}
               >
-                {/* Gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${policy.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
-                <div className="relative p-8">
+                <div className="p-6">
                   {/* Icon */}
-                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${policy.color} rounded-xl mb-6 text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
-                    {policy.icon}
+                  <div className={`inline-flex items-center justify-center w-10 h-10 ${policy.bgColor} rounded-lg mb-4`}>
+                    <div className={policy.textColor}>
+                      {policy.icon}
+                    </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{policy.period}</h3>
-                  <div className={`text-2xl font-bold ${policy.textColor} mb-4`}>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{policy.period}</h3>
+                  <div className={`text-xl font-medium ${policy.textColor} mb-3`}>
                     {policy.fee}
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-sm">
                     {policy.description}
                   </p>
-
-                  {/* Animated border */}
-                  <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${policy.color} transform origin-left transition-transform duration-500 ${activeCard === policy.id ? 'scale-x-100' : 'scale-x-0'}`}></div>
                 </div>
               </div>
             ))}
@@ -114,47 +99,35 @@ export default function CancellationPolicy() {
         </div>
 
         {/* Company Cancellation Section */}
-        <div className={`mb-12 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mb-12 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-10 relative overflow-hidden">
-              {/* Background pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-center mb-8">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full shadow-lg">
-                    <RefreshCw className="w-8 h-8 text-white" />
-                  </div>
+            <div className="bg-white rounded-lg shadow-sm border p-8">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
+                  <RefreshCw className="w-6 h-6 text-blue-600" />
                 </div>
-
-                <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-3">
                   Cancellation by Company
                 </h2>
+              </div>
 
-                <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 border-2 border-emerald-200">
-                  <div className="flex items-start space-x-4">
-                    <CheckCircle className="w-8 h-8 text-emerald-600 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        Your Protection Guarantee
-                      </h3>
-                      <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                        We may cancel due to unforeseen circumstances including natural disasters, 
-                        government restrictions, or other extraordinary events beyond our control.
-                      </p>
-                      <div className="bg-white/80 rounded-xl p-6 border border-emerald-100">
-                        <h4 className="font-semibold text-emerald-800 mb-2">Your Options:</h4>
-                        <ul className="text-gray-700 space-y-2">
-                          <li className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                            <span>Choose an alternate trip or date</span>
-                          </li>
-                          <li className="flex items-center space-x-3">
-                            <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                            <span>Receive a full refund with no penalties</span>
-                          </li>
-                        </ul>
-                      </div>
+              <div className="bg-green-50 rounded-lg p-6 border border-green-200">
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 mb-3">
+                      Your Protection
+                    </h3>
+                    <p className="text-gray-700 mb-4">
+                      We may cancel due to unforeseen circumstances (natural disasters, 
+                      government restrictions, etc.). 
+                    </p>
+                    <div className="bg-white rounded-lg p-4 border border-green-100">
+                      <h4 className="font-medium text-green-800 mb-2">You may choose:</h4>
+                      <ul className="text-gray-700 space-y-1 text-sm">
+                        <li>• An alternate trip or date</li>
+                        <li>• Receive a full refund</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -163,11 +136,11 @@ export default function CancellationPolicy() {
           </div>
         </div>
 
-        {/* Footer CTA */}
-        <div className={`text-center transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="inline-flex items-center space-x-2 text-gray-600 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30">
-            <Shield className="w-5 h-5" />
-            <span className="font-medium">Questions? Contact our support team for assistance</span>
+        {/* Footer */}
+        <div className={`text-center transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className="inline-flex items-center space-x-2 text-gray-600 bg-white px-4 py-2 rounded-lg border shadow-sm">
+            <Shield className="w-4 h-4" />
+            <span className="text-sm">Questions? Contact our support team</span>
           </div>
         </div>
       </div>
