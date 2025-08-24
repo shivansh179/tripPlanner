@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
     { name: 'Blogs', href: '#' },
     { name: 'Disclaimer', href: '#' },
     { name: 'Privacy Policy', href: '/PrivacyPolicy' },
-    { name: 'Cancellation Policy', href: '#' },
+    { name: 'Cancellation Policy', href: '/CancellationPolicy' },
     { name: 'Terms & Conditions', href: '/TermsAndConditions' },
     { name: 'About Us', href: '#' },
     { name: 'Linktree', href: '#' },
